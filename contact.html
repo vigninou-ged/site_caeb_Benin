@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>CAEB - Contactez-nous</title>
+
+  <!-- Mobile Specific Metas -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Contactez le Conseil des Activités Éducatives du Bénin pour plus d'informations sur nos programmes éducatifs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="CAEB">
+
+  <!-- Plugins Needed for the Project -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="images/preloader.gif" alt="preloader">
+  </div>
+
+  <!-- Header -->
+  <header class="fixed-top header">
+    <!-- Navbar -->
+    <div class="navigation w-100">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="70px" alt="logo"></a>
+          <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Qui sommes-nous ?</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActivites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Nos Activités
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivites">
+                  <li><a class="dropdown-item" href="education.html">Éducation</a></li>
+                  <li><a class="dropdown-item" href="sante-nutrition.html">Santé/Nutrition</a></li>
+                  <li><a class="dropdown-item" href="action-sociale.html">Action sociale</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActualites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Actualités/Événement
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActualites">
+                  <li><a class="dropdown-item" href="actualites.html">Actualité</a></li>
+                  <li class="dropdown dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownEvenements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Événement
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownEvenements">
+                      <li><a class="dropdown-item" href="evenements-passes.html">Événements passés</a></li>
+                      <li><a class="dropdown-item" href="evenements-a-venir.html">Événements à venir</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="contact.html">Nous contacter</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Modals -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content rounded-0 border-0 p-4">
+        <div class="modal-header border-0">
+          <h3>Inscription</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="row">
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Téléphone">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Nom">
+            </div>
+            <div class="col-12">
+              <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Mot de passe">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content rounded-0 border-0 p-4">
+        <div class="modal-header border-0">
+          <h3>Connexion</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="row">
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Téléphone">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Nom">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Mot de passe">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Se connecter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Title -->
+  <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-inline custom-breadcrumb mb-2">
+            <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="index.html">Accueil</a></li>
+            <li class="list-inline-item text-white h3 font-secondary nasted">Nous contacter</li>
+          </ul>
+          <p class="text-lighten mb-0">Contactez le Conseil des Activités Éducatives du Bénin pour en savoir plus sur nos programmes éducatifs, nos formations gratuites et nos bibliothèques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="section-title">Nous contacter</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <form action="/contact.html" method="POST">
+            <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Votre nom" required>
+            <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Votre email" required>
+            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Objet" required>
+            <textarea name="message" id="message" class="form-control mb-3" placeholder="Votre message" required></textarea>
+            <button type="submit" value="send" class="btn btn-primary">Envoyer le message</button>
+          </form>
+        </div>
+        <div class="col-lg-5">
+          <p class="mb-5">Le Conseil des Activités Éducatives du Bénin (CAEB) est à votre disposition pour répondre à toutes vos questions concernant nos bibliothèques, formations gratuites en programmation, langues, littérature, et autres programmes éducatifs. Contactez-nous pour plus d'informations ou pour rejoindre nos initiatives.</p>
+          <a href="tel:+22995050670" class="text-color h5 d-block">+229 95050670</a>
+          <a href="mailto:caeb@caeb-benin.com" class="mb-5 text-color h5 d-block">caeb@caeb-benin.com</a>
+          <p>01 BP 1484 Porto-Novo, Bénin<br>Oganla, 3 bis, Rue Delcassé</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <section class="section pt-0">
+    <div id="map_canvas" data-latitude="6.4969" data-longitude="2.6036"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+            <h3 class="text-white">Inscrivez-vous à notre newsletter</h3>
+            <form action="#">
+              <div class="input-wrapper">
+                <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Entrez votre email...">
+                <button type="submit" value="send" class="btn btn-primary">S'inscrire</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Content -->
+    <div class="footer bg-footer section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+            <ul class="list-unstyled">
+              <li class="mb-2">01 BP 1484 Porto-Novo, Bénin</li>
+              <li class="mb-2">Oganla, 3 bis, Rue Delcassé</li>
+              <li class="mb-2">+229 95050670</li>
+              <li class="mb-2">caeb@caeb-benin.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">ENTREPRISE</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="about.html">À propos</a></li>
+              <li class="mb-3"><a class="text-color" href="formations.html">Formations</a></li>
+              <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
+              <li class="mb-3"><a class="text-color" href="actualites.html">Actualités</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">LIENS</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="courses.html">Formations</a></li>
+              <li class="mb-3"><a class="text-color" href="events.html">Événements</a></li>
+              <li class="mb-3"><a class="text-color" href="catalogue.html">Catalogue</a></li>
+              <li class="mb-3"><a class="text-color" href="bibliotheques.html">Bibliothèques</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">SUPPORT</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="#">FAQ</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">RECOMMANDATIONS</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="#">Partenaires</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Ressources</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Éducation</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">Copyright ©
+              <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+              </script> 
+              , CAEB
+            </p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://facebook.com/caeb"><i class="ti-facebook text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/caeb"><i class="ti-twitter-alt text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://instagram.com/caeb"><i class="ti-instagram text-primary"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <script src="plugins/venobox/venobox.min.js"></script>
+  <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

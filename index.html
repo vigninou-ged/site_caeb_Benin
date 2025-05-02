@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>CAEB - Conseil des Activités Éducatives du Bénin</title>
+
+  <!-- Mobile Specific Metas -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Bibliothèque et centre éducatif présent dans chaque département du Bénin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="CAEB">
+  
+  <!-- Plugins Needed for the Project -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="images/preloader.gif" alt="preloader">
+  </div>
+
+  <!-- Header -->
+  <header class="fixed-top header">
+    <!-- Navbar -->
+    <div class="navigation w-100">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="70px" alt="logo"></a>
+          <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Qui sommes-nous ?</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActivites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Nos Activités
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivites">
+                  <li><a class="dropdown-item" href="education.html">Éducation</a></li>
+                  <li><a class="dropdown-item" href="sante-nutrition.html">Santé/Nutrition</a></li>
+                  <li><a class="dropdown-item" href="action-sociale.html">Action sociale</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActualites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Actualités/Événement
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActualites">
+                  <li><a class="dropdown-item" href="actualites.html">Actualité</a></li>
+                  <li class="dropdown dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownEvenements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Événement
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownEvenements">
+                      <li><a class="dropdown-item" href="evenements-passes.html">Événements passés</a></li>
+                      <li><a class="dropdown-item" href="evenements-a-venir.html">Événements à venir</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Nous contacter</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Modals -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content rounded-0 border-0 p-4">
+        <div class="modal-header border-0">
+          <h3>Inscription</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="row">
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Téléphone">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Nom">
+            </div>
+            <div class="col-12">
+              <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Mot de passe">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content rounded-0 border-0 p-4">
+        <div class="modal-header border-0">
+          <h3>Connexion</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="row">
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Téléphone">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Nom">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Mot de passe">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Se connecter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Slider -->
+  <section class="hero-section overlay bg-cover" data-background="images/banner/banner-1.jpg">
+    <div class="container">
+      <div class="hero-slider">
+        <div class="hero-slider-item">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Votre avenir commence avec CAEB</h1>
+              <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Le Conseil des Activités Éducatives du Bénin offre des ressources éducatives et des formations gratuites dans chaque département.</p>
+              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Découvrez maintenant</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slider-item">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Apprenez, grandissez, réussissez</h1>
+              <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Formations gratuites en programmation, langues et littérature pour tous.</p>
+              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Inscrivez-vous</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slider-item">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Un savoir accessible à tous</h1>
+              <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Explorez nos bibliothèques et programmes éducatifs près de chez vous.</p>
+              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Contactez-nous</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Feature -->
+  <section class="bg-gray overflow-md-hidden">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-xl-4 col-lg-5 align-self-end">
+          <img class="img-fluid w-100" src="images/banner/library-feature.png" alt="library-feature">
+        </div>
+        <div class="col-xl-8 col-lg-7">
+          <div class="row feature-blocks bg-gray justify-content-between">
+            <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+              <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+              <h3 class="mb-xl-4 mb-lg-3 mb-4">Formations en Programmation</h3>
+              <p>Apprenez Python, Scratch et l'analyse de données avec nos cours gratuits pour juniors et avancés.</p>
+            </div>
+            <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+              <i class="ti-comment-alt mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+              <h3 class="mb-xl-4 mb-lg-3 mb-4">Apprentissage des Langues</h3>
+              <p>Maîtrisez de nouvelles langues grâce à nos programmes éducatifs accessibles à tous.</p>
+            </div>
+            <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+              <i class="ti-bookmark-alt mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+              <h3 class="mb-xl-4 mb-lg-3 mb-4">Littérature et Culture</h3>
+              <p>Explorez un vaste catalogue de livres et participez à des ateliers littéraires.</p>
+            </div>
+            <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+              <i class="ti-desktop mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+              <h3 class="mb-xl-4 mb-lg-3 mb-4">Ressources Numériques</h3>
+              <p>Accédez à des outils et ressources numériques dans toutes nos bibliothèques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 order-2 order-md-1">
+          <h2 class="section-title">À propos du CAEB</h2>
+          <p>Le Conseil des Activités Éducatives du Bénin (CAEB) est une institution nationale dédiée à l'éducation, offrant des bibliothèques et des formations gratuites dans chaque département du Bénin.</p>
+          <p>Notre mission est de promouvoir l'accès à l'éducation et à la culture à travers des programmes innovants en programmation, langues et littérature.</p>
+          <a href="about.html" class="btn btn-outline-primary">En savoir plus</a>
+        </div>
+        <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+          <img class="img-fluid w-100" src="images/about/about-us.jpg" alt="about image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <h2 class="mb-0 text-nowrap mr-3">Nos Formations</h2>
+            <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+            <div>
+              <a href="courses.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">Voir tout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="images/courses/course-1.jpg" alt="course thumb">
+            <div class="card-body">
+              <ul class="list-inline mb-2">
+                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>15-01-2025</li>
+                <li class="list-inline-item"><a class="text-color" href="course-single.html">Programmation</a></li>
+              </ul>
+              <a href="course-single.html">
+                <h4 class="card-title">Programmation Python</h4>
+              </a>
+              <p class="card-text mb-4">Apprenez les bases de la programmation avec Python, adapté à tous les niveaux.</p>
+              <a href="course-single.html" class="btn btn-primary btn-sm">S'inscrire</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="images/courses/course-2.jpg" alt="course thumb">
+            <div class="card-body">
+              <ul class="list-inline mb-2">
+                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>01-02-2025</li>
+                <li class="list-inline-item"><a class="text-color" href="course-single.html">Programmation</a></li>
+              </ul>
+              <a href="course-single.html">
+                <h4 class="card-title">Scratch pour Juniors</h4>
+              </a>
+              <p class="card-text mb-4">Initiez les plus jeunes à la programmation avec Scratch.</p>
+              <a href="course-single.html" class="btn btn-primary btn-sm">S'inscrire</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="images/courses/course-3.jpg" alt="course thumb">
+            <div class="card-body">
+              <ul class="list-inline mb-2">
+                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>10-03-2025</li>
+                <li class="list-inline-item"><a class="text-color" href="course-single.html">Langues</a></li>
+              </ul>
+              <a href="course-single.html">
+                <h4 class="card-title">Apprentissage des Langues</h4>
+              </a>
+              <p class="card-text mb-4">Cours interactifs pour maîtriser de nouvelles langues.</p>
+              <a href="course-single.html" class="btn btn-primary btn-sm">S'inscrire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="courses.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">Voir tout</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h6 class="text-white font-secondary mb-0">Rejoignez nos formations gratuites</h6>
+          <h2 class="section-title text-white">Développez vos compétences avec CAEB</h2>
+          <a href="contact.html" class="btn btn-light">Inscrivez-vous maintenant</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Story -->
+  <section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-4 position-relative success-video">
+          <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
+            <i class="ti-control-play"></i>
+          </a>
+        </div>
+        <div class="col-lg-6 col-sm-8">
+          <div class="bg-white p-5">
+            <h2 class="section-title">Histoires de Réussite</h2>
+            <p>Nos programmes ont permis à des milliers d'étudiants d'acquérir des compétences précieuses en programmation, langues et littérature.</p>
+            <p>Découvrez les témoignages de ceux qui ont transformé leur avenir grâce à CAEB.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <h2 class="mb-0 text-nowrap mr-3">Événements à venir</h2>
+            <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+            <div>
+              <a href="events.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">Voir tout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+              <img class="card-img-top rounded-0" src="images/events/event-1.jpg" alt="event thumb">
+              <div class="card-date"><span>18</span><br>Janvier</div>
+            </div>
+            <div class="card-body">
+              <p><i class="ti-location-pin text-primary mr-2"></i>Cotonou</p>
+              <a href="event-single.html"><h4 class="card-title">Atelier Python pour débutants</h4></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+              <img class="card-img-top rounded-0" src="images/events/event-2.jpg" alt="event thumb">
+              <div class="card-date"><span>21</span><br>Février</div>
+            </div>
+            <div class="card-body">
+              <p><i class="ti-location-pin text-primary mr-2"></i>Porto-Novo</p>
+              <a href="event-single.html"><h4 class="card-title">Journée de la littérature</h4></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+              <img class="card-img-top rounded-0" src="images/events/event-3.jpg" alt="event thumb">
+              <div class="card-date"><span>23</span><br>Mars</div>
+            </div>
+            <div class="card-body">
+              <p><i class="ti-location-pin text-primary mr-2"></i>Parakou</p>
+              <a href="event-single.html"><h4 class="card-title">Cours de langues intensif</h4></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="events.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">Voir tout</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="partenaire">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Nos Partenaires</h2>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slide-track">
+          <img src="images/partenaire/Bénin excellence.png" alt="Bénin Excellence">
+          <img src="images/partenaire/Claudine talon .png" alt="Claudine Talon">
+          <img src="images/partenaire/GFA .png" alt="GFA">
+          <img src="images/partenaire/Optima construction .png" alt="Optima Construction">
+          <img src="images/partenaire/secours populaire .png" alt="Secours Populaire">
+          <img src="images/partenaire/solidarite laique.png" alt="Solidarité Laïque">
+          <img src="images/partenaire/USAID .png" alt="USAID">
+          <img src="images/partenaire/Bénin excellence.png" alt="Bénin Excellence">
+          <img src="images/partenaire/Claudine talon .png" alt="Claudine Talon">
+          <img src="images/partenaire/GFA .png" alt="GFA">
+          <img src="images/partenaire/Optima construction .png" alt="Optima Construction">
+          <img src="images/partenaire/secours populaire .png" alt="Secours Populaire">
+          <img src="images/partenaire/solidarite laique.png" alt="Solidarité Laïque">
+          <img src="images/partenaire/USAID .png" alt="USAID">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-title">Dernières Actualités</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="images/blog/post-1.jpg" alt="Post thumb">
+            <div class="card-body">
+              <ul class="list-inline mb-3">
+                <li class="list-inline-item mr-3 ml-0">28 Janvier 2025</li>
+                <li class="list-inline-item mr-3 ml-0">Par CAEB</li>
+              </ul>
+              <a href="blog-single.html">
+                <h4 class="card-title">Nouveau programme de formation Python</h4>
+              </a>
+              <p class="card-text">Découvrez notre nouveau cursus pour débutants et avancés.</p>
+              <a href="blog-single.html" class="btn btn-primary btn-sm">Lire plus</a>
+            </div>
+          </div>
+        </article>
+        <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="images/blog/post-2.jpg" alt="Post thumb">
+            <div class="card-body">
+              <ul class="list-inline mb-3">
+                <li class="list-inline-item mr-3 ml-0">13 Février 2025</li>
+                <li class="list-inline-item mr-3 ml-0">Par CAEB</li>
+              </ul>
+              <a href="blog-single.html">
+                <h4 class="card-title">Atelier littéraire à Cotonou</h4>
+              </a>
+              <p class="card-text">Participez à notre événement culturel annuel.</p>
+              <a href="blog-single.html" class="btn btn-primary btn-sm">Lire plus</a>
+            </div>
+          </div>
+        </article>
+        <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="images/blog/post-3.jpg" alt="Post thumb">
+            <div class="card-body">
+              <ul class="list-inline mb-3">
+                <li class="list-inline-item mr-3 ml-0">24 Mars 2025</li>
+                <li class="list-inline-item mr-3 ml-0">Par CAEB</li>
+              </ul>
+              <a href="blog-single.html">
+                <h4 class="card-title">Cours de langues gratuits</h4>
+              </a>
+              <p class="card-text">Inscrivez-vous à nos sessions intensives.</p>
+              <a href="blog-single.html" class="btn btn-primary btn-sm">Lire plus</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+            <h3 class="text-white">Inscrivez-vous à notre newsletter</h3>
+            <form action="#">
+              <div class="input-wrapper">
+                <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Entrez votre email...">
+                <button type="submit" value="send" class="btn btn-primary">S'inscrire</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer bg-footer section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="CAEB Logo" width="70px"></a>
+            <ul class="list-unstyled">
+              <li class="mb-2">01 BP 1484 Porto-Novo, Bénin</li>
+              <li class="mb-2">Oganla, 3 bis, Rue Delcassé</li>
+              <li class="mb-2">+229 95050670</li>
+              <li class="mb-2">caeb@caeb-benin.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">ENTREPRISE</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="about.html">À propos</a></li>
+              <li class="mb-3"><a class="text-color" href="formations.html">Formations</a></li>
+              <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
+              <li class="mb-3"><a class="text-color" href="actualites.html">Actualités</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">LIENS</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="courses.html">Formations</a></li>
+              <li class="mb-3"><a class="text-color" href="events.html">Événements</a></li>
+              <li class="mb-3"><a class="text-color" href="catalogue.html">Catalogue</a></li>
+              <li class="mb-3"><a class="text-color" href="bibliotheques.html">Bibliothèques</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">SUPPORT</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="#">FAQ</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">RECOMMANDATIONS</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="#">Partenaires</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Ressources</a></li>
+              <li class="mb-3"><a class="text-color" href="#">Éducation</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">Copyright ©
+              <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+              </script> 
+              , CAEB
+            </p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://facebook.com/caeb"><i class="ti-facebook text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/caeb"><i class="ti-twitter-alt text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://instagram.com/caeb"><i class="ti-instagram text-primary"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <script src="plugins/venobox/venobox.min.js"></script>
+  <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
