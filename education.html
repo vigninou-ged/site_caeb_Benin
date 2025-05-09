@@ -1,26 +1,155 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Basic Page Needs -->
   <meta charset="utf-8">
   <title>CAEB - Activités Éducatives</title>
+
+  <!-- Mobile Specific Metas -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Découvrez les initiatives éducatives du CAEB pour une éducation inclusive et de qualité au Bénin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="CAEB">
+
+  <!-- Plugins Needed for the Project -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
   <link rel="stylesheet" href="plugins/animate/animate.css">
   <link rel="stylesheet" href="plugins/aos/aos.css">
   <link rel="stylesheet" href="plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
 </head>
+
 <body>
+  <!-- Preloader -->
   <div class="preloader">
     <img src="images/preloader.gif" alt="preloader">
   </div>
+
+  <!-- Header -->
+  <header class="fixed-top header">
+    <!-- Navbar -->
+    <div class="navigation w-100">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="70px" alt="logo"></a>
+          <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Qui sommes-nous ?</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActivites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Nos Activités
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivites">
+                  <li><a class="dropdown-item active" href="education.html">Éducation</a></li>
+                  <li><a class="dropdown-item" href="sante-nutrition.html">Santé/Nutrition</a></li>
+                  <li><a class="dropdown-item" href="action-sociale.html">Action sociale</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActualites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Actualités/Événement
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActualites">
+                  <li><a class="dropdown-item" href="actualites.html">Actualité</a></li>
+                  <li class="dropdown dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownEvenements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Événement
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownEvenements">
+                      <li><a class="dropdown-item" href="evenements-passes.html">Événements passés</a></li>
+                      <li><a class="dropdown-item" href="evenements-a-venir.html">Événements à venir</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Nous contacter</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Modals -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content rounded-0 border-0 p-4">
+        <div class="modal-header border-0">
+          <h3>Inscription</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="row">
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Téléphone">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Nom">
+            </div>
+            <div class="col-12">
+              <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Mot de passe">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content rounded-0 border-0 p-4">
+        <div class="modal-header border-0">
+          <h3>Connexion</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="row">
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Téléphone">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Nom">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Mot de passe">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Se connecter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Page Title -->
   <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
     <div class="container">
       <div class="row">
@@ -34,6 +163,9 @@
       </div>
     </div>
   </section>
+  <!-- End Page Title -->
+
+  <!-- Start Education Section -->
   <section class="section">
     <div class="container">
       <div class="row">
@@ -80,6 +212,9 @@
       </div>
     </div>
   </section>
+  <!-- End Education Section -->
+
+  <!-- Footer -->
   <footer>
     <div class="newsletter">
       <div class="container">
@@ -100,7 +235,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
-            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="CAEB Logo" width="70px"></a>
             <ul class="list-unstyled">
               <li class="mb-2">01 BP 1484 Porto-Novo, Bénin</li>
               <li class="mb-2">Oganla, 3 bis, Rue Delcassé</li>
@@ -168,6 +303,8 @@
       </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
   <script src="plugins/jQuery/jquery.min.js"></script>
   <script src="plugins/bootstrap/bootstrap.min.js"></script>
   <script src="plugins/slick/slick.min.js"></script>
